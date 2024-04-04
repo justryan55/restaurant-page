@@ -2,11 +2,11 @@ import './style.css';
 
 import { createElementsOnLandingPage } from "./pageLoad.js";
 import { loadMenuTabToPage } from "./menuLoad.js";
-import { addContactTabToPage } from "./contactLoad.js";
+import { addContactTabToPage } from "./AboutUsLoad.js";
 
 const menuBtn = document.getElementById('menu');
 const homeBtn = document.getElementById('home');
-const contactBtn = document.getElementById('contact');
+const contactBtn = document.getElementById('about-us');
 
 function addEventListenersToButtons(){
     menuBtn.addEventListener("click", loadMenuTabToPage);
