@@ -14,6 +14,26 @@ function addEventListenersToButtons(){
     contactBtn.addEventListener("click", addContactTabToPage);
 }
 
+function addBackgroundImageToPage(){
+    const content = document.querySelector('#content'); 
+    const backgroundImage = './background.svg';
+    const imgElement = document.createElement('img');
+    
+    imgElement.src = backgroundImage;
+    content.appendChild(imgElement);
+    // content.style.backgroundImage = `url(${backgroundImage})`;
+}
 
 createElementsOnLandingPage();
 addEventListenersToButtons();
+addBackgroundImageToPage()
+
+
+
+
+    
+    // content.style.backgroundImage = "url('4dec1b3c642ab7ad588d9bcc2a259042.svg')";
+    // content.style.backgroundRepeat = "repeat";
+    // content.style.backgroundSize = "200px";
+    // content.style.backgroundPosition = "center";
+    // content.style.backgroundAttachment = "fixed"; 
