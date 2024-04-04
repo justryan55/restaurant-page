@@ -2,13 +2,13 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin'); 
 
 module.exports = {
-    mode: 'development',
+  mode: 'development',
   entry: './src/index.js',
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',  
       title: 'Development',
-        filename: 'index.html',
+      filename: 'index.html',
     })
   ],
   output: {
@@ -17,13 +17,22 @@ module.exports = {
   },
   module: {
     rules: [
-        {
-            test: /\.css$/i,
-            use: ['style-loader', 'css-loader'],
-        },
-        {
-            test: /\.svg$/,
-            loader: 'svg-inline-loader',
-          }
+      {
+        test: /\.(sass|less|css)$/,
+   use: ["style-loader", "css-loader", 'sass-loader'],
+      },
+      {
+        test: /\.svg$/,
+        loader: 'svg-inline-loader',
+        options: {
+          name: '[name].[ext]', 
+          outputPath: 'assets/svg/', 
+        },    
+      },
+      {
+        test: /\.(gif|svg|jpg|png)$/,
+        loader: 'file-loader',
+      },
     ]
-  }}
+  }
+}
