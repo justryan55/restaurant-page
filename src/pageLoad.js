@@ -12,7 +12,7 @@ export function createElementsOnLandingPage(){
     headline.classList.add('headline');
     welcomeText.classList.add('welcome-text');
     
-    headline.innerText = "Uncle Jack's Pizza";
+    headline.innerText = "Uncle Jack's Pizzeria";
     welcomeText.innerText = `Indulge in a slice of tradition and taste the difference at Uncle Jack's Pizza! Nestled in the heart of flavor town, our pizzeria is a haven for those seeking the perfect blend of crispy crust, savory sauces, and mouthwatering toppings.
 
     From classic pepperoni perfection to gourmet creations that push the boundaries of taste, each bite at Uncle Jack's is crafted with love and passion. Whether you're dining in, grabbing takeout, or having us deliver straight to your door, we promise an experience that's as satisfying as it is delicious.
