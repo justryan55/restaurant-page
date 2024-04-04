@@ -1,5 +1,5 @@
 import './style.css';
-
+import backgroundImage from "./backgroundImg.png";
 import { createElementsOnLandingPage } from "./pageLoad.js";
 import { loadMenuTabToPage } from "./menuLoad.js";
 import { addContactTabToPage } from "./AboutUsLoad.js";
@@ -15,25 +15,16 @@ function addEventListenersToButtons(){
 }
 
 function addBackgroundImageToPage(){
-    const content = document.querySelector('#content'); 
-    const backgroundImage = './background.svg';
-    const imgElement = document.createElement('img');
-    
-    imgElement.src = backgroundImage;
-    content.appendChild(imgElement);
-    // content.style.backgroundImage = `url(${backgroundImage})`;
+    const content = document.querySelector('#content');
+    content.style.backgroundImage = `url(${backgroundImage})`;
+    content.style.backgroundRepeat = "no-repeat";
+    content.style.backgroundSize = "800px";
+    content.style.backgroundPosition = "center";
+    content.style.backgroundAttachment = "fixed"; 
+
 }
 
 createElementsOnLandingPage();
 addEventListenersToButtons();
 addBackgroundImageToPage()
 
-
-
-
-    
-    // content.style.backgroundImage = "url('4dec1b3c642ab7ad588d9bcc2a259042.svg')";
-    // content.style.backgroundRepeat = "repeat";
-    // content.style.backgroundSize = "200px";
-    // content.style.backgroundPosition = "center";
-    // content.style.backgroundAttachment = "fixed"; 
