@@ -7,11 +7,9 @@ export function createElementsOnLandingPage(){
     clearContent();
     const content = document.querySelector('#content'); 
     const headline = document.createElement('h1');
-    const backgroundImage = document.createElement('img');
     const welcomeText = document.createElement('p');
 
     headline.classList.add('headline');
-    backgroundImage.classList.add('background-image');
     welcomeText.classList.add('welcome-text');
     
     headline.innerText = "Uncle Jack's Pizza";
@@ -21,18 +19,8 @@ export function createElementsOnLandingPage(){
     
     Join us as we celebrate the art of pizza-making, one slice at a time. Welcome to Uncle Jack's Pizza – where every bite feels like home.`;
 
-    // // backgroundImage.src = "4dec1b3c642ab7ad588d9bcc2a259042.svg";
-    // backgroundImage.alt = 'pizza background'
-
     content.appendChild(headline);
     content.appendChild(welcomeText);
-    content.appendChild(backgroundImage);
-    
-    // content.style.backgroundImage = "url('4dec1b3c642ab7ad588d9bcc2a259042.svg')";
-    // content.style.backgroundRepeat = "repeat";
-    // content.style.backgroundSize = "200px";
-    // content.style.backgroundPosition = "center";
-    // content.style.backgroundAttachment = "fixed"; 
 
 }
 
